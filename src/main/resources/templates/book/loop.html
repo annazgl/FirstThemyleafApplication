@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{hello.welcomeMessage}">Title</title>
+</head>
+<body>
+<h1>All Books</h1>
+
+<h2>List</h2>
+
+<ul>
+    <li th:each="book: ${book}" th:text="${book}"/>
+</ul>
+
+<table border="1">
+    <tr>
+        <th>Author</th>
+        <th>Title</th>
+        <th>Price</th>
+    </tr>
+    <tr th:each="book: ${book}">
+        <td th:text="${book.author}"/>
+        <td th:text="${book.title}"/>
+        <td th:text="${book.price}"/>
+
+</table>
+
+</body>
+</html>

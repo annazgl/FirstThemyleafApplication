@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Moja strona</title>
+</head>
+<body>
+<h1>Hello Thymeleaf!</h1>
+
+<form action="/add" method="post" th:object="${article}">
+    <p><input type="text" th:field="*{title}" required="true"/></p>
+    <p><textarea th:field="*{body}"/></p>
+    <p><input type="text" th:field="*{tags}"/></p>
+    <input type="submit" value="Add"/>
+</form>
+
+
+</body>
+</html>
